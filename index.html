@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Pricing Table</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .pricing-card {
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .featured-card {
+            border: 2px solid #6c5ce7;
+            transform: translateY(-15px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-20px);
+        }
+        
+        .pricing-header {
+            padding: 2rem;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .pricing-period {
+            color: #6c757d;
+        }
+        
+        .pricing-features {
+            padding: 1.5rem;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            padding: 0.5rem 0;
+        }
+        
+        .pricing-features li::before {
+            content: "✓";
+            color: #6c5ce7;
+            margin-right: 0.5rem;
+        }
+        
+        .btn-pricing {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-card {
+                transform: translateY(0);
+                margin: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 text-primary">Choose Your Plan</h1>
+                <p class="lead text-muted">Select the perfect plan that works for you</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Basic Plan -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card pricing-card h-100">
+                    <div class="pricing-header bg-light">
+                        <h4 class="my-0 font-weight-bold">Basic</h4>
+                        <div class="pricing-price mt-3">$9.99</div>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>HD streaming</li>
+                            <li>Watch on 1 device</li>
+                            <li>No downloads</li>
+                            <li>Limited catalog</li>
+                        </ul>
+                        <button class="btn btn-outline-primary btn-lg btn-pricing">Get Started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Standard Plan (Featured) -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card pricing-card featured-card h-100">
+                    <div class="card-header text-white bg-primary">
+                        <span class="badge bg-light text-primary rounded-pill">Popular</span>
+                    </div>
+                    <div class="pricing-header bg-light">
+                        <h4 class="my-0 font-weight-bold">Standard</h4>
+                        <div class="pricing-price mt-3">$19.99</div>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Full HD streaming</li>
+                            <li>Watch on 2 devices</li>
+                            <li>Download on 2 devices</li>
+                            <li>Full movie catalog</li>
+                            <li>Ad-free experience</li>
+                        </ul>
+                        <button class="btn btn-primary btn-lg btn-pricing">Get Started</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="col-lg-4 col-md-6 mb-4 mx-auto">
+                <div class="card pricing-card h-100">
+                    <div class="pricing-header bg-light">
+                        <h4 class="my-0 font-weight-bold">Premium</h4>
+                        <div class="pricing-price mt-3">$29.99</div>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>4K Ultra HD streaming</li>
+                            <li>Watch on 4 devices</li>
+                            <li>Download on 6 devices</li>
+                            <li>Full movie + exclusive catalog</li>
+                            <li>Ad-free experience</li>
+                            <li>Early access to new releases</li>
+                        </ul>
+                        <button class="btn btn-outline-primary btn-lg btn-pricing">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
